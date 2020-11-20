@@ -1,0 +1,103 @@
+.post-container {
+    width: 80%;
+    margin: 20px auto;
+    
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.06),0 2px 5px 0 rgba(0,0,0,.2);
+    background-color: #fff;
+    max-width: 600px;
+}
+
+
+.post-img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+
+.post-no-img {
+  width: 100%;
+  height: 50px;
+}
+
+.post-tnm {
+  width: 90%;
+  margin: 0 auto;
+}
+.post-title {
+  position: relative;
+  font-size: 28px;
+  padding: 15px 10px;
+  border-bottom: 1px solid #bdc3c7;
+}
+.post-title::first-letter {
+  text-transform: uppercase;
+}
+.post-message {
+  padding: 10px 0;
+  line-height: 25px;
+}
+.post-message::first-letter {
+  text-transform: uppercase;
+}
+
+.post-button {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px 30px 10px;
+  cursor: pointer;
+ 
+}
+.post-button button {
+  padding: 3px 10px;
+  border: 1px solid #bdc3c7;
+  margin: 0 2px;
+  color: #3f4244;
+  outline: none;
+}
+.post-button button:hover {
+  color: black;
+}
+
+.first {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.last {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.like {
+  padding-top: 10px;
+  position: relative;
+  color: blue;
+}
+.like i {
+  color: blue;
+}
+.post-link {
+  color: #0000ff;
+  font-size: 20px;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+@media(min-width: 700px) {
+  .post-button button {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+  .post-title {
+    font-size: 30px;
+  }
+  .post-message {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
