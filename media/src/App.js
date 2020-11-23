@@ -4,7 +4,7 @@ import Form from './components/Form/Form';
 import { useDispatch } from 'react-redux';
 import { getPosts } from './actions/posts-action';
 import Navbar from './components/Navbar/Navbar';
-
+import News from './components/News/News';
 const App = () => {
 
   const dispatch = useDispatch();
@@ -19,6 +19,7 @@ const App = () => {
       <Navbar/>
       <Form currentId={currentId} setCurrentId={setCurrentId} />
       <Posts setCurrentId={setCurrentId} />
+      <News/>
     </>
   );
 }

@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components';
-
+import logo from '../../images/logo_transparent.png'
 const Navbar = () => {
     return (
         <StyledComponents>
+            
             <div>
-                <i className="fas fa-home one"></i>
+                <i className="fas fa-home active"></i>
                 <i className="far fa-flag"></i>
                 <i className="far fa-clock"></i>
                 <i className="fas fa-search"></i>
@@ -18,6 +19,7 @@ export default Navbar
 
 
 const StyledComponents = styled.header`
+    position: relative;
     width: 100%;
     height: 50px;
     background-color: #fff;
@@ -38,13 +40,19 @@ const StyledComponents = styled.header`
         i {
             font-size: 18px;
             color: black;
+            width: 100%;
+            text-align: center;
+            cursor: pointer;
         }
 
     }
 
-    .one {
-        color: blue;
-        border-bottom: 3px solid blue;
+    .active {
+        color: #0c75de;
+        border-bottom: 2px solid #0c75de;
+        border-radius: 0px;
+        padding-bottom: 15px;
+        padding-top: 15px;
     }
     
 

@@ -1,14 +1,44 @@
 .post-container {
     width: 80%;
     margin: 20px auto;
-    
     position: relative;
     border-radius: 20px;
     box-shadow: 0 1px 1px 0 rgba(0,0,0,.06),0 2px 5px 0 rgba(0,0,0,.2);
     background-color: #fff;
     max-width: 600px;
+    overflow: hidden;
+}
+.post-container::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: -60px;
+  background-color: #0c75de;
+  width: 120px;
+  height: 30px;
+  transform: rotate(-50deg);
 }
 
+@media(min-width: 800px){
+  .post-container {
+      margin-left: 230px;
+      margin-bottom: 60px;
+      max-width: 600px;
+  }
+}
+@media(min-width: 1100px){
+  .post-container {
+      margin: 20px auto;
+      margin-bottom: 60px;
+  }
+}
+@media(min-width: 1300px){
+  .post-container {
+      margin: 20px auto;
+      margin-bottom: 60px;
+      max-width: 700px;
+  }
+}
 
 .post-img {
   width: 100%;
@@ -56,11 +86,15 @@
   padding: 3px 10px;
   border: 1px solid #bdc3c7;
   margin: 0 2px;
-  color: #3f4244;
   outline: none;
+  background-color: #0c75de;
+  transition: 0.3s ease-in-out;
+
 }
 .post-button button:hover {
-  color: black;
+  color: #0c75de;;
+  background-color: #f0eeee;
+  border: 1px solid #0c75de;
 }
 
 .first {
@@ -75,13 +109,17 @@
 .like {
   padding-top: 10px;
   position: relative;
-  color: blue;
+  color: #0c75de;
 }
 .like i {
-  color: blue;
+  color: #0c75de;
+  font-size: 20px;
+}
+.post-link i {
+  font-size: 25px;
 }
 .post-link {
-  color: #0000ff;
+  color: #0c75de;
   font-size: 20px;
   position: absolute;
   top: 5px;

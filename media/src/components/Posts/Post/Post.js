@@ -23,9 +23,6 @@ export default function Post({post, setCurrentId}) {
                     <div className="post-message">{post.message}</div>
                     <div className="like"><i className="fas fa-thumbs-up"></i>&nbsp;{post.likeCount}</div>
                 </div>
-                <div>
-
-                </div>
                 <div className="post-button">
                     <button className="first" onClick={()=> {dispatch(likePost(post._id))}}>
                         <i className="far fa-thumbs-up"></i>
