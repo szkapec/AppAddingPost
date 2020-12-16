@@ -1,5 +1,5 @@
 .post-container {
-    width: 80%;
+    width: 90%;
     margin: 20px auto;
     position: relative;
     border-radius: 20px;
@@ -8,16 +8,16 @@
     max-width: 600px;
     overflow: hidden;
 }
-.post-container::before {
+/* .post-container::before {
   content: '';
   position: absolute;
   top: 0px;
   left: -60px;
-  background-color: #0c75de;
+  background-color: rgb(181, 181, 181);
   width: 120px;
   height: 30px;
   transform: rotate(-50deg);
-}
+} */
 
 @media(min-width: 800px){
   .post-container {
@@ -87,11 +87,12 @@
   border: 1px solid #bdc3c7;
   margin: 0 2px;
   outline: none;
-  background-color: #0c75de;
+  background-color: #e4e8ec;
   transition: 0.3s ease-in-out;
   max-width: 180px;
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
+  cursor: pointer;
 }
 @media(min-width:700px){
   .post-button button {
@@ -99,9 +100,7 @@
   }
 }
 .post-button button:hover {
-  color: #0c75de;;
-  background-color: #f0eeee;
-  border: 1px solid #0c75de;
+  background-color: white;
 }
 
 .first {
@@ -126,7 +125,7 @@
   font-size: 25px;
 }
 .post-link {
-  color: #0c75de;
+  color: rgb(99, 99, 99);
   font-size: 20px;
   position: absolute;
   top: 5px;

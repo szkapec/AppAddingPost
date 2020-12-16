@@ -9,18 +9,21 @@ const App = () => {
 
   const dispatch = useDispatch();
   const [currentId, setCurrentId] = useState(null)
+  const [active, setActive] = useState(false)
+
 
   useEffect(() => {
     dispatch(getPosts());
   }, [currentId, dispatch])
 
   return (
-    <>
+    <div className="container">
       <Navbar/>
-      <Form currentId={currentId} setCurrentId={setCurrentId} />
-      <Posts setCurrentId={setCurrentId} />
+      <Form currentId={currentId} setCurrentId={setCurrentId} active={active} setActive={setActive} />
+      <Posts setCurrentId={setCurrentId} active={active} setActive={setActive} />
+      <div className="set-activity" onClick={()=>setActive(!active)}>+</div>
       <News/>
-    </>
+    </div>
   );
 }
 

@@ -3,7 +3,7 @@ import moment from 'moment';
 import {useDispatch} from 'react-redux';
 import {deletePost,likePost} from '../../../actions/posts-action';
 import styled from 'styled-components';
-export default function Post({post, setCurrentId}) {
+export default function Post({post, setCurrentId, active, setActive}) {
     const dispatch = useDispatch()
 
     return (
@@ -26,19 +26,20 @@ export default function Post({post, setCurrentId}) {
                 <div className="post-button">
                     <button className="first" onClick={()=> {dispatch(likePost(post._id))}}>
                         <i className="far fa-thumbs-up"></i>
-                        Like
+                        Lubię
                     </button>
                     <button onClick={() => {
                         setCurrentId(post._id)
+                        setActive(!active)
                         window.scrollTo(0,0)
                     }}>
                         <i className="far fa-edit"></i> 
-                        Edit
+                        Edytuj
                     </button>
                    
                     <button className="last" onClick={()=> {dispatch(deletePost(post._id))}}>
                         <i className="far fa-trash-alt"></i>
-                        delete
+                        Usuń
                     </button>
                 </div>
             </div>

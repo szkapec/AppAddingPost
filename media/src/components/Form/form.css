@@ -1,41 +1,57 @@
+.container {
+    /* width: 100vw;
+    overflow: hidden; */
+}
+
+.form-container, .form-container-hide {
+    overflow: hidden;
+    width: 300px;   
+    position: fixed;
+    top: 60px;
+    right: 0px;
+    z-index: 999;
+    transition: .9s ease-in-out;
+
+}
 .form-container {
-    width: 100%;   
-    padding-top: 50px;
+    transform: translate(0%);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.06),0 2px 5px 0 rgba(0,0,0,.2);
+}
+.form-container-hide {
+    transform: translate(300px);
 }
 
 .form {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
     position: relative;
     text-align: center;
     max-width: 600px;
-    width: 80%;
-    margin: 20px auto;
+    width: 100%;
+    height: 400px;
     background-color: rgba(255, 255, 255, 0.96);
-    border-radius: 30px;
     box-shadow: 0 1px 1px 0 rgba(0,0,0,.06),0 2px 5px 0 rgba(0,0,0,.2);
     overflow: hidden;
 }
-@media(min-width: 700px){
-    .form {
-        font-size: 18px;
-    }
-}
-@media(min-width: 800px){
-    .form {
-        margin-left: 230px;
-        font-size: 18px;
-    }
-}
-@media(min-width: 1100px){
-    .form {
-        margin: 20px auto;
-    }
-}
-@media(min-width: 1300px){
-    .form {
-        max-width: 700px;
-    }
+
+.set-activity {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #e4e4e4;
+    border: 1px solid rgb(145, 145, 145);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
   }
-.form div {
+  .form div {
     padding: 5px;
     z-index: 2;
 }
@@ -45,17 +61,18 @@
     left: 0px;
     width: 10px;
     height: 150%;
-    background-color:#0c75de;
+    background-color:#e4e4e4;
     z-index: 1;
 }
 input {
-    width: 80%;
+    width: 100%;
     border-radius: 25px;
     background-color: rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(0, 0, 0, 0.2);
     /* font-size: 16px; */
-    padding: 5px 10px;
-    z-index: 2;
+    padding: 10px 20px;
+    outline: none;
+    z-index: 999999;
 
 }
 input:hover {
@@ -63,7 +80,7 @@ input:hover {
 }
 .form-button {
     border: 1px solid #bdc3c7;
-    background-color: #0c75de;;
+    background-color: #e4e4e4;
     padding: 5px 10px;
     margin: 10px;
     border-radius: 3px;
@@ -71,28 +88,19 @@ input:hover {
     transition: .3s ease-in-out;
    
 }
-@media(min-width:700px){
-    .form-button {
-        font-size: 16px;
-    }
-}
 .form-button:hover {
     background-color: #f0eeee;
     cursor: pointer;
-    border: 1px solid #0c75de;
-    color: #0c75de;
 }
 .form-title {
-    display: flex;
+    display: block;
     width: 80%;
     margin: 0 auto;
-    height: 30px;
     align-items: center;
 }
 .title, .link {
-    width: 40%;
-    margin: 0 auto;
-    margin: 0 5px;
+    width: 80%;
+    margin: 10px 5px;
 }
 .form-img {
     width: 40px;
@@ -108,6 +116,68 @@ input:hover {
     width: 100px;
     border:none;
     background-color: transparent;
-    padding: 5px 10px;
-  
+    padding: 10px 20px;
+
+}
+.message {
+    max-width: 220px;
+    min-height: 60px;
+    width: 100%;
+}
+
+@media(min-width: 700px){
+    .form {
+        font-size: 18px;
+    }
+}
+@media(min-width: 800px){
+    .form {
+        margin-left: 15px;
+        font-size: 18px;
+        height: auto;
+    }
+    .form-container, .form-container-hide {
+        width: 500px;   
+    }
+    .form-container {
+        transform: translate(0%);
+    }
+    .form-container-hide {
+        transform: translate(480px);
+    }
+    input {
+        font-size: 18px;
+        padding: 5px 10px 5px;
+    }
+    .message {
+        max-width: 300px;
+        min-height: 80px;
+    }
+}
+@media(min-width: 1100px){
+ 
+    .form {
+        margin: 0 auto;
+        height: 80vh;
+        box-shadow: 0 1px 1px 0 rgba(0,0,0,.06),0 2px 5px 0 rgba(0,0,0,.2);
+    }
+    .file input {
+        padding-top: 30px;
+    }
+    .message {
+        font-size: 16px;
+        padding: 10px;
+        margin-top: 10px;
+    }
+}
+@media(min-width: 1300px){
+    .form {
+        max-width: 700px;
+    }
+  }
+
+@media(min-width:700px){
+    .form-button {
+        font-size: 16px;
+    }
 }
